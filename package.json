@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "This is a website for Ristorante Con Fusion",
   "main": "index.html",
+  "homepage": "https://imalimoussa.github.io/learning-bootstrap",
   "scripts": {
     "clean": "rimraf dist",
     "copyfonts": "copyfiles -f node_modules/font-awesome/fonts/* dist/fonts",
@@ -14,12 +15,14 @@
     "scss": "node-sass -o css/ css/",
     "watch:scss": "onchange \"css/*.scss\" -- npm run scss",
     "watch:all": "parallelshell \"npm run watch:scss\" \"npm run lite\"",
-    "start": "npm run watch:all"
+    "start": "npm run watch:all",
+    "deploy": "gh-pages -d build"
   },
   "author": "ali",
   "license": "ISC",
   "devDependencies": {
     "cssmin": "^0.4.3",
+    "gh-pages": "^2.2.0",
     "htmlmin": "0.0.7",
     "imagemin-gifsicle": "^7.0.0",
     "lite-server": "^2.3.0",
